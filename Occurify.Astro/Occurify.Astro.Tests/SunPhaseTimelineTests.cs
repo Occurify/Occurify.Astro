@@ -9,7 +9,11 @@ namespace Occurify.Astro.Tests
         public void GetPreviousUtcInstant()
         {
             //Arrange
+#if NET7_0 || NET8_0 || NET9_0
             const long expectedSunriseTicks = 599341223760027276;
+#else
+            const long expectedSunriseTicks = 599341223760030000;
+#endif
             var date = new DateTime(1900, 3, 28, 23, 20, 0).AsUtcInstant();
             var coordinates = new Coordinates(82.5, 62.3);
             var sunrises = AstroInstants.SunPhases(coordinates, SunPhases.Sunrise);
@@ -42,7 +46,11 @@ namespace Occurify.Astro.Tests
         public void GetNextUtcInstant()
         {
             // Arrange
+#if NET7_0 || NET8_0 || NET9_0
             const long expectedSunriseTicks = 599341223760027276;
+#else
+            const long expectedSunriseTicks = 599341223760030000;
+#endif
             var date = new DateTime(1900, 3, 28, 23, 15, 0).AsUtcInstant();
             var coordinates = new Coordinates(82.5, 62.3);
             var sunrises = AstroInstants.SunPhases(coordinates, SunPhases.Sunrise);
@@ -75,7 +83,11 @@ namespace Occurify.Astro.Tests
         public void IsInstant()
         {
             // Arrange
+#if NET7_0 || NET8_0 || NET9_0
             const long expectedSunriseTicks = 599341223760027276;
+#else
+            const long expectedSunriseTicks = 599341223760030000;
+#endif
             var date = new DateTime(expectedSunriseTicks, DateTimeKind.Utc);
             var coordinates = new Coordinates(82.5, 62.3);
             var sunrises = AstroInstants.SunPhases(coordinates, SunPhases.Sunrise);
