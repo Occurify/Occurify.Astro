@@ -28,7 +28,7 @@ namespace Occurify.Astro.Tests
         }
 
         [TestMethod]
-        public void GetPreviousUtcInstant_NoMoreSunSets()
+        public void GetPreviousUtcInstant_NoMoreSunsets()
         {
             // Arrange
             var date = new DateTime(1, 1, 1).AsUtcInstant();
@@ -152,17 +152,17 @@ namespace Occurify.Astro.Tests
 
             // Act
             // Get initial sunrise
-            var sunRise = sunrises.GetNextUtcInstant(date);
-            Assert.IsNotNull(sunRise);
+            var sunrise = sunrises.GetNextUtcInstant(date);
+            Assert.IsNotNull(sunrise);
 
             // Check if all values before give the same result.
-            date = sunRise.Value - TimeSpan.FromTicks(amountToCheck);
+            date = sunrise.Value - TimeSpan.FromTicks(amountToCheck);
 
             // Assert
             for (var i = 0; i < amountToCheck; i++)
             {
                 var next = sunrises.GetNextUtcInstant(date);
-                Assert.AreEqual(next, sunRise);
+                Assert.AreEqual(next, sunrise);
 
                 Assert.IsFalse(sunrises.IsInstant(date));
 
@@ -222,17 +222,17 @@ namespace Occurify.Astro.Tests
 
             // Act
             // Get initial sunrise
-            var sunRise = sunrises.GetPreviousUtcInstant(date);
-            Assert.IsNotNull(sunRise);
+            var sunrise = sunrises.GetPreviousUtcInstant(date);
+            Assert.IsNotNull(sunrise);
 
             // Check if all values after give the same result.
-            date = sunRise.Value + TimeSpan.FromTicks(amountToCheck);
+            date = sunrise.Value + TimeSpan.FromTicks(amountToCheck);
 
             // Assert
             for (var i = 0; i < amountToCheck; i++)
             {
                 var next = sunrises.GetPreviousUtcInstant(date);
-                Assert.AreEqual(next, sunRise);
+                Assert.AreEqual(next, sunrise);
 
                 Assert.IsFalse(sunrises.IsInstant(date));
 

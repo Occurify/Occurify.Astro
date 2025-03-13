@@ -21,12 +21,12 @@ namespace Occurify.Astro
         /// Returns a <see cref="IPeriodTimeline"/> with periods starting sunrise and ending at sunset on <paramref name="coordinates"/>.
         /// These periods can span more than one day. For example in the polar region.
         /// </summary>
-        public static IPeriodTimeline Daytime(Coordinates coordinates) => AstroInstants.SunRise(coordinates).To(AstroInstants.SunSet(coordinates));
+        public static IPeriodTimeline Daytime(Coordinates coordinates) => AstroInstants.Sunrise(coordinates).To(AstroInstants.Sunset(coordinates));
 
         /// <summary>
         /// Returns a <see cref="IPeriodTimeline"/> with periods starting sunset and ending at sunrise on <paramref name="coordinates"/>.
         /// These periods can span more than one day. For example in the polar region.
         /// </summary>
-        public static IPeriodTimeline NightTime(Coordinates coordinates) => AstroInstants.SunSet(coordinates).To(AstroInstants.SunRise(coordinates));
+        public static IPeriodTimeline NightTime(Coordinates coordinates) => AstroInstants.Sunset(coordinates).To(AstroInstants.Sunrise(coordinates));
     }
 }
