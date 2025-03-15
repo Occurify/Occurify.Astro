@@ -14,7 +14,7 @@
     <RepositoryUrl>https://github.com/Occurify/Occurify.Astro</RepositoryUrl>
 	<PackageLicenseFile>LICENSE</PackageLicenseFile>
 	<PackageReadmeFile>README.md</PackageReadmeFile>
-	<PackageTags>Occurify;Astronomical;Astro;Sunrise;Sunset;Sun-Phase;Sun;Solar;Noon;Night;Dawn;Dusk;Nautical;Golden-Hour;Evening;Morning;Nadir;SunCalcNet;Time;Instant;Instants;Period;Periods;DateTime;Timeline;Time-Period;Time-Management;Schedule;Scheduling;Reactive;ReactiveX;Rx;Filter;Transform;Extension;Methods;Fluent;Fluent-Interface;C#;.NET</PackageTags>
+	<PackageTags>Occurify;Astronomical;Astro;Coordinate;Coordinates;Longitude;Latitude;Sunrise;Sunset;Sun-Phase;Sun;Solar;Noon;Night;Dawn;Dusk;Nautical;Golden-Hour;Celestial;Evening;Morning;Nadir;SunCalcNet;Time;Instant;Instants;Period;Periodically;Periods;DateTime;Timeline;Time-Period;Time-Management;Recurring;Repeat;Repeating;Schedule;Scheduling;Reactive;ReactiveX;Rx;Filter;Transform;Extension;Methods;Algorithms;Fluent;Fluent-Interface;C#;.NET;Occurrence;Occur;UTC;Bidirectional;MIT</PackageTags>
   </PropertyGroup>
   
   <ItemGroup>
